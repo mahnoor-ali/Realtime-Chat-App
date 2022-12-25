@@ -1,0 +1,110 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #EBF4F6;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  background-color: #00B2A9;
+  color: white;
+  padding: 5px;
+  padding-left: 15px;
+}
+
+#appname{
+  padding-left: 8px;
+  font-size: 21px;
+  font-weight: 100;
+}
+
+.logo {
+  height: 50px;
+}
+
+.chat-container {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.chat-box {
+  height: 79vh;
+  overflow-y: auto;
+  padding: 15px;
+}
+
+.message-container {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 10px;
+}
+
+.message-container.left {
+  justify-content: flex-start;
+}
+
+.message-container.right {
+  justify-content: flex-end;
+}
+
+.message-bubble {
+  max-width: 60%;
+  padding: 10px 15px;
+  border-radius: 5px;
+  background-color: #00B2A9;
+  color: white;
+}
+
+.typing-box {
+  display: flex;
+  align-items: center;
+  background-color: #F2F5F8;
+  padding: 10px;
+}
+
+form {
+  display: flex;
+  width: 100%;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  background-color: #F2F5F8;
+  color: #5F6368;
+}
+
+button[type="submit"] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 0 5px 5px 0;
+}
+
+button[type="submit"]:hover {
+  background-color: #009C93;
+  cursor: pointer;
+}
+
+button[type="submit"] img {
+  font-size: 30px;
+}
+
+.send-btn img{
+  width: 39px;
+  height: 39px;
+}
