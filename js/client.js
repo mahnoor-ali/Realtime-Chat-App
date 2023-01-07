@@ -23,3 +23,33 @@ socket.on('left', name => {
  }) //listen the 'left' event emitted by server, then append the message to chatbox
  
  
+inputForm.addEventListener('submit', (e)=>
+{
+    e.preventDefault(); //prevent the page from reloading
+    const message = inputMsg.value; //get the message from input box
+    append(`${message}`, "right"); 
+    socket.emit('send', message); //send the message to server
+    inputMsg.value = ''; //clear the input box
+});
+
+function append(message, positionOfMsg)
+{
+    const joinedMessage = document.createElement('div');
+    if(positionOfMsg!="centre") //if the message is of type 'send' or 'receive' 
+    {
+    joinedMessage.classList.add(positionOfMsg);
+    joinedMessage.classList.add("message-container");
+    joinedMessage.innerHTML= `<div class="message-container ${positionOfMsg}}">
+                              <div class="message-bubble"> ${message} 
+                              </div>
+                              </div>`;
+    }
+    else //if the message is of type 'user joined' or 'user left'
+    { 
+      joinedMessage.innerHTML= `<div> ${message} </div>`;
+    joinedMessage.id="joined-update"; //add id to the message container to style it differently from other messages (already created in css file)
+    }
+
+    messageContainer.append(joinedMessage); //append the message to chatbox container 
+    if(positionOfMsg=="left" || positionOfMsg=="centre") //if the message is of type 'user left'
+}
