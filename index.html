@@ -4,8 +4,8 @@
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <!-- includes the Socket.IO client library in a web page which allows the web page to
   establish a connection with the Socket.IO server, send and receive events through that connection-->
-  <script src="http://localhost:8000/socket.io/socket.io.js"></script>
-  <script src="js/client.js"></script>
+  <script defer src="http://localhost:8000/socket.io/socket.io.js"></script>
+  <script defer src="js/client.js"></script>
   <title>ChatApp</title>
 </head>
 <body>
@@ -13,78 +13,12 @@
     <img src="public/logo.png" alt="ChatApp logo" class="logo">
      <h3 id="appname"> Realtime-ChatApp</h3>
   </div>
-  <div class="chat-container">
-    <div class="chat-box">
-      <div class="message-container left">
-        <div class="message-bubble">
-          <p>Hello! How are you doing?</p>
-        </div>
-      </div>
-      <div class="message-container right">
-        <div class="message-bubble">
-          <p>I'm doing well, thanks for asking. How about you?</p>
-        </div>
-      </div>
-      <div class="message-container left">
-        <div class="message-bubble">
-          <p>I'm doing fine too. What's new?</p>
-        </div>
-      </div>
-
-
-
-
-      <div class="message-container left">
-        <div class="message-bubble">
-          <p>Hello! How are you doing?</p>
-        </div>
-      </div>
-      <div class="message-container right">
-        <div class="message-bubble">
-          <p>I'm doing well, thanks for asking. How about you?</p>
-        </div>
-      </div>
-      <div class="message-container left">
-        <div class="message-bubble">
-          <p>I'm doing fine too. What's new?</p>
-        </div>
-      </div><div class="message-container left">
-        <div class="message-bubble">
-          <p>Hello! How are you doing?</p>
-        </div>
-      </div>
-      <div class="message-container right">
-        <div class="message-bubble">
-          <p>I'm doing well, thanks for asking. How about you?</p>
-        </div>
-      </div>
-      <div class="message-container left">
-        <div class="message-bubble">
-          <p>I'm doing fine too. What's new?</p>
-        </div>
-      </div><div class="message-container left">
-        <div class="message-bubble">
-          <p>Hello! How are you doing?</p>
-        </div>
-      </div>
-      <div class="message-container right">
-        <div class="message-bubble">
-          <p>I'm doing well, thanks for asking. How about you?</p>
-        </div>
-      </div>
-      <div class="message-container left">
-        <div class="message-bubble">
-          <p>I'm doing fine too. What's new?</p>
-        </div>
-      </div>
-
-
-
-
+  <div class="chat-container">     
     </div>
-    <div class="typing-box">
-      <form>
-        <input type="text" placeholder="Type a message...">
+
+    <div class="typing-container">
+      <form id="typing-box">
+        <input type="text" id="typeMsg" placeholder="Type a message...">
         <button type="submit" class="send-btn">
           <img src="public/send.png" alt="Send button icon">
         </button>

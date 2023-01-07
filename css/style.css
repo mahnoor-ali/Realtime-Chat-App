@@ -48,23 +48,24 @@ body {
   margin-bottom: 10px;
 }
 
-.message-container.left {
+.left {
   justify-content: flex-start;
 }
 
-.message-container.right {
+.right {
   justify-content: flex-end;
 }
 
 .message-bubble {
-  max-width: 60%;
+  width: 17em;
   padding: 10px 15px;
   border-radius: 5px;
   background-color: #00B2A9;
   color: white;
+  word-wrap: break-word;      
 }
 
-.typing-box {
+.typing-container {
   display: flex;
   align-items: center;
   background-color: #F2F5F8;
@@ -107,4 +108,24 @@ button[type="submit"] img {
 .send-btn img{
   width: 39px;
   height: 39px;
+}
+
+#joined-update{
+  background-color: #05beb5;
+  width: fit-content;
+  margin: auto;
+  padding: 6px 7px 6px 7px;
+  border-radius: 12px;
+  margin-bottom: 18px;
+  margin-top: 18px;
+  color: #3e3d3d;
+}
+
+#time
+{
+font-size: 10px;
+color: #ebebeb;
+float: right;
+clear: both;
+margin-top: 19px;
 }
